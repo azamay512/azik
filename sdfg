@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css
+">
+<style>
+    .navbar{
+        width: 100%;
+        height: 10vh;
+    }
+     img{
+        margin: 35px;
+    }
+    h2{
+        margin: 120px;
+        transform: translateX(-90px)translateY(-120px);
+    }
+    
+      @media (max-width: 768px) {
+      .boy2{
+        margin-top: 200px;
+        margin-left: 90px;
+      }
+      .boy3{
+        margin-top: 290px;
+        margin-left: -1000px;
+      }
+      .col4{
+        margin-top: -900px;
+      }
+      
+    }
+
+</style>
+</head>
+<body>
+    <div class="navbar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div style="margin-left: 20px;" class="container-fluid">
+    <a  style="font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; " class="navbar-brand" href="#">Ultras</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div style="margin-left: 400px;" class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pages
+</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Blog
+</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">GET PRO</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+    </div>
+    <div class="rasm"></div>
+
+    <div style="transform: translateY(200px);"  class="container">
+      <h1 style="font-size: 120px;">Summer <br> Collection</h1>
+      <h6>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus <br> laudantium a rerum explicabo.</h4>
+      <button style="border: none;box-shadow: 1px 1px 10px 1px ; height: 40px; width: 150px;">shop now</button>
+    </div>
+
+    <div style="transform: translateY(500px);" class="col">
+        <img src="https://demo.templatesjungle.com/ultras/images/product-item1.jpg" alt="">
+        <img src="https://demo.templatesjungle.com/ultras/images/product-item2.jpg" alt="">
+        <img src="https://demo.templatesjungle.com/ultras/images/product-item3.jpg" alt="">
+        <img src="https://demo.templatesjungle.com/ultras/images/product-item4.jpg" alt="">
+    </div>
+    <div style="transform: translateY(500px); display: flex;" class="col1">
+        <h2>Full sleeve cover shirt</h2>
+        <h2>Volunter vals</h2>
+        <h2>Double Yellow</h2>
+        <h2>Long belly</h2>
+    </div>
+    <div style="display: flex;transform: translateY(280px); color: rgb(0, 225, 255);" class="col2">
+        <h2>$40.00</h2>
+        <h2 style="transform: translateX(95px)translateY(-120px);">$38.00</h2>
+        <h2 style="transform: translateX(210px)translateY(-120px);">$44.00</h2>
+        <h2 style="transform: translateX(325px)translateY(-120px);">$33.00</h2>
+    </div>
+    <div style="transform: translateY(50px);" class="col3">
+        <img class="boy1" style="border-radius: 20px;" src="https://demo.templatesjungle.com/ultras/images/collection-item1.jpg" alt="">
+        <img class="boy2" style="transform: translateY(-205px)translateX(-50px);" src="https://demo.templatesjungle.com/ultras/images/collection-item2.jpg" alt="">
+        <img class="boy3" style="transform: translateX(1050px)translateY(-440px);" src="https://demo.templatesjungle.com/ultras/images/collection-item3.jpg" alt="">
+    </div>
+    <div style="margin-left: 600px;transform: translateY(-900px);" class="col4">
+        <h3>casual collection</h3>
+        <h1 style="font-size: 90px;">Street <br> Wear.</h1>
+        <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+    </div>
+    <div style="margin-left: 1200px;transform: translateY(-1000px);" class="col5">
+        <h3>Best Selling Product</h3>
+        <h1 style="font-size: 70px;">Wollen <br> Hat.</h1>
+
+    </div>
+    <div style="margin-left: 1200px;transform: translateY(-1600px);" class="col6">
+        <h3>Basic Collection</h3>
+        <h1 style="font-size: 70px;">Basic <br> Shoes.</h1>
+    </div>
+</body>
+</html>
