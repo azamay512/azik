@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .container {
+      background-color: aqua;
+      height: 300px;
+      width: 400px;
+      transform: translateY(200px) translateX(700px);
+      border-radius: 50px;
+    }
+
+    .container input {
+      display: flex;
+      transform: translateY(100px) translateX(40px);
+      justify-content: center;
+      margin: 10px;
+      height: 30px;
+      width: 300px;
+      border-radius: 10px;
+      border: none;
+      color: black;
+    }
+
+    button {
+      height: 50px;
+      width: 180px;
+      transform: translateY(-50px) translateX(100px);
+      background-color: black;
+      color: aqua;
+      border-radius: 20px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <input id="f" type="text" placeholder="gmail ismingizni kiriting">
+    <input id="w" type="password" placeholder="parol">
+    <button onclick="wew()">bos</button>
+    <div style="transform: translateY(70px)translateX(120px);" id="ddd"></div>
+  </div>
+   
+  <script>
+    function wew() {
+      let name = document.getElementById("f").value;
+      let parol = document.getElementById("w").value;
+      document.getElementById("ddd").innerHTML = `Gmail: ${name} <br> Parol: ${parol};`
+    }
+  </script>
+  
+</body>
+</html>

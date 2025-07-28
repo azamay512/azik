@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 100px;
+            background-color: black;
+        }
+
+        .w {
+            margin-top: 20%;
+        }
+
+        .t {
+            margin-top: -130px;
+            transition: transform 0.6s ease;
+            position: relative;
+         
+        }
+
+        .a {
+            height: 50px;
+            width: 100px;
+            font-size: 16px;
+            transform: translateY(280px) translateX(-900px);
+            box-shadow: 2px 2px 40px 2px rgb(21, 255, 0);
+          background-color: rgb(21, 255, 0);
+          border: none;
+        }
+
+        
+        .jump {
+            animation: jump 0.5s ease;
+        }
+
+        @keyframes jump {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-900px); }
+            100% { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <marquee behavior="" direction="" scrollamount="60">
+        <img class="w" width="100px" src="./e6d354da-85ca-4fff-a044-538547e19ef7_removalai_preview.png" alt="">
+    </marquee>
+
+    <img id="e" class="t" src="./8d0fd7f7-9ca9-44e2-aaeb-754545089385_removalai_preview.png" alt="">
+
+
+    <br>
+    <button id="b" class="a">Sakrash</button>
+
+    <script>
+        const dino = document.getElementById('e');
+        const button = document.getElementById('b');
+
+        button.addEventListener('click', () => {
+            dino.classList.add('jump');
+
+          
+            setTimeout(() => {
+                dino.classList.remove('jump');
+            }, 500); 
+        });
+    </script>
+</body>
+</html>

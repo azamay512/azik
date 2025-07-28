@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>document</title>
+  <style>
+    body {
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #ffffff;
+      color: rgb(43, 255, 0);
+      font-size: 3em;
+    }
+ 
+  </style>
+</head>
+<body>
+  
+  <div id="clock">00:00:00</div>
+
+
+  <script>
+  const clockDiv = document.getElementById("clock");
+
+
+    const uniqueSeconds = new set();
+
+    function updateClock() {
+    const now = new Date();
+     const hour = now.getHours().toString().padStart(2, '0');
+      const minute = now.getMinutes().toString().padStart(2, '0');
+     const second = now.getSeconds().toString().padStart(2, '0');
+
+
+      const timeMap = new Map();
+    timeMap.set("soat", hour);
+      timeMap.set("minut", minute);
+       timeMap.set("sekund", second);
+
+
+        uniqueSeconds.add(second);
+
+
+           clockDiv.textContent = `${timeMap.get("soat")}:${timeMap.get("minut")}:${timeMap.get("sekund")}`;
+
+console.log("Sekundlar (unikal):", Array.from(uniqueSeconds));
+
+         if (second === "00") {
+        uniqueSeconds.clear();
+        console.log("Yangi daqiqa – Set tozalandi");
+      }
+    }
+
+setInterval(updateClock, 1000);
+
+  </script>
+</body>
+</html>
+

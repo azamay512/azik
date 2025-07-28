@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+  let a = ["azamat", "javohir", "sardor"];
+  let b = prompt("Ismingizni kiriting:");
+
+  let topildi = false;
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] === b) {
+      topildi = true;
+      break;
+    }
+  }
+
+  if (topildi) {
+    let g1 = prompt("Siz dizaynerlikda ishlaysizmi? (ha/yo‘q)");
+    if (g1 === "ha") {
+      alert("Siz dizaynerlik kasbida ishlaysiz");
+    } else {
+      let g2 = prompt("Siz dasturchilikda ishlaysizmi? (ha/yo‘q)");
+      if (g2 === "ha") {
+        alert("Siz dasturchilik kasbida ishlaysiz");
+      } else {
+        let g3 = prompt("Siz o‘qituvchilikda ishlaysizmi? (ha/yo‘q)");
+        if (g3 === "ha") {
+          alert("Siz o‘qituvchilik kasbida ishlaysiz");
+        } else {
+          alert("Siz boshqa kasb qidiring");
+        }
+      }
+    }
+  } else {
+    alert("Xatolik!");
+  }
+</script>
+
+</body>
+</html>

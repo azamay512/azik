@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+       background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 280px;
+      height: 80px;
+      background: #000000;
+      border-radius: 20px;
+    box-shadow:1px 1px 10px 1px #00ffe7; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      background:#00ffe7;
+      width: 200px;
+      justify-content: center;
+      text-align: center;
+    }
+    .text{
+        color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="text">00:00:00</h1>
+  </div>
+  <script>
+         const a = document.querySelector("#text")
+         
+        setInterval(()=>{
+            const clock = new Date()
+
+            const a = clock.getHours()
+            const b = clock.getMinutes()
+            const d = clock.getSeconds()
+              
+            
+            const hour = a + ":" + b + ":" + d 
+            text.innerHTML = hour
+        }) 
+    </script>
+</body>
+</html>

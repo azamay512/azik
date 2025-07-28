@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kitob Qidiruv</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+      padding: 2rem;
+    }
+    h1 {
+      color: #333;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px 0;
+      width: 100%;
+      max-width: 400px;
+    }
+    .book-result {
+      background: #fff;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .book-cover {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📚 Kitobni Qidiring</h1>
+  <input type="text" id="searchInput" placeholder="Kitob nomini kiriting..." />
+  <button onclick="searchBook()">Qidirish</button>
+
+  <div id="result" class="book-result"></div>
+
+  <script>
+    function searchBook() {
+      const query = document.getElementById('searchInput').value;
+      const url = `https://openlibrary.org/search.json?q=${encodeURIComponent(query)}`;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const book = data.docs[0]; 
+          if (book) {
+            const coverId = book.cover_i;
+            const coverUrl = coverId
+              ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`
+              : '';
+
+            document.getElementById('result').innerHTML = `
+              ${coverUrl ? `<img src="${coverUrl}" class="book-cover" />` : ''}
+              <h2>${book.title}</h2>
+              <p><strong>Muallif:</strong> ${book.author_name?.join(', ') || 'Noma’lum'}</p>
+              <p><strong>Nashr yili:</strong> ${book.first_publish_year || 'Noma’lum'}</p>
+            `;
+          } else {
+            document.getElementById('result').innerHTML = '<p>Kitob topilmadi.</p>';
+          }
+        })
+        .catch(error => {
+          document.getElementById('result').innerHTML = `<p>Xatolik yuz berdi: ${error}</p>`;
+        });
+    }
+  </script>
+
+</body>
+</html>

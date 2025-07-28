@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="comand">
+    <img id="img" src="" alt="" width="100px" height="100px">
+    <strong id="a">ism...</strong>
+  </div>
+
+  <button onclick="col()">yangi foydalanuvchi</button>
+
+  <script>
+      function col() {
+     fetch("https://randomuser.me/api/")
+  .then(res => res.json())
+  .then(data => {
+    let user = data.results[0]; 
+    document.getElementById("img").src = user.picture.large;
+  document.getElementById("a").innerHTML = `${user.name.first} ${user.name.last}` 
+  })
+  .catch(err => {
+    alert("xatolik yuz berdi" + err)
+  })
+  }
+   col()
+  </script>
+    
+</body>
+</html>

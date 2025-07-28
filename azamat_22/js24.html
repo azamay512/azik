@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("1-ism");
+        let b = prompt("2-ism");
+        let d = prompt("3-ism");
+
+        let w = parseFloat(prompt(`${a}ning oyligi`));
+        let j = parseFloat(prompt(`${b}ning oyligi`));
+        let m = parseFloat(prompt(`${d}ning oyligi`));
+
+
+        let i = [
+            { ism: a, oylik: w },
+            { ism: b, oylik: j },
+            { ism: d, oylik: m }
+        ];
+
+
+        let u = (w + j + m) / 3;
+
+        let e = i[0];
+        for (let i = 1; i < i.length; i++) {
+            if (i[i].oylik > e.oylik) {
+                e = i[i];
+            }
+        }
+
+        alert(`Urtacha oylik: ${u.toFixed(1.5)}\nEng kop oylik olgan: ${e.ism} - ${e.oylik}`);
+    </script>
+</body>
+</html>

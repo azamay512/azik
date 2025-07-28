@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      padding-top: 50px;
+    }
+
+    .div {
+      height: 800px;
+      width: 360px;
+      border: 3px solid black;
+      background-image: url(https://i.pinimg.com/236x/99/88/79/99887975293657baf32cd4b9a4540be0.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 10px;
+      border-radius: 18px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 1px 1px 20px 1px;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .icon-btn img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .section {
+      display: none;
+      margin-top: 20px;
+    }
+
+    .section img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      margin-bottom: 10px;
+    }
+
+    #backBtn {
+      display: none;
+      margin-top: 20px;
+      background: white;
+      color: black;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    #powerBtn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 35px;
+      height: 35px;
+      background: url('https://cdn-icons-png.flaticon.com/512/1828/1828665.png') no-repeat center center;
+      background-size: cover;
+      border: none;
+      cursor: pointer;
+      z-index: 200;
+    }
+
+    #buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+
+    #screenOff {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black url('https://1000logos.net/wp-content/uploads/2016/10/Apple-Logo.png') no-repeat center center;
+      background-size: 100px;
+      z-index: 100;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="box" class="div">
+
+    <button id="powerBtn" onclick="togglePower()" title="Uchirish/Yoqish"></button>
+
+
+    <div id="screenOff"></div>
+
+    <div id="buttons">
+      <button class="icon-btn" onclick="showSection('gallery')">
+        <img src="https://cdn-icons-png.flaticon.com/512/1829/1829586.png" alt="Gallery">
+      </button>
+      <button class="icon-btn" onclick="showSection('youtube')">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+      </button>
+      <button class="icon-btn" onclick="showSection('galleryy')">
+        <img src="https://cdn-icons-png.flaticon.com/512/2702/2702602.png" alt="Google">
+      </button>
+      <button class="icon-btn" onclick="showSection('galleryu')">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+      </button>
+
+      <button class="icon-btn" onclick="showSection('gallerya')">
+        <img src="https://play-lh.googleusercontent.com/NgQmLt3nFpoW6ZVo8uvvd9YZqmEuLE_YfiIjwXQVawoOS_EXwPpudHy9yFGbS_JLdoc" alt="Telegram">
+      </button>
+
+    </div>
+
+
+    <button id="backBtn" onclick="goBack()">⬅ Orqaga</button>
+
+    <div id="gallery" class="section">
+      <img src="https://www.bmw-special-sales.com/content/dam/bmw/marketBMWCOM/bmw-special-sales_com/common/protection/7-protection/bmw-css-7-series-protection-ms-new-standard.jpg" alt="Rasm 1">
+      <img src="https://www.primecarsrentalthailand.com/wp-content/uploads/2024/12/BMW-750e-Front-1-copy-e1740583703441.jpeg" alt="Rasm 2">
+      <img src="https://www.bmw.co.uk/content/dam/bmw/common/all-models/m-series/series-overview/bmw-m-series-seo-overview-ms-04.jpg" alt="Rasm 3">
+    </div>
+
+    <div id="youtube" class="section">
+      <iframe src="https://www.youtube.com/embed/3JZ_D3ELwOQ?autoplay=1&mute=1" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" allowfullscreen></iframe>
+    </div>
+
+    <div id="galleryy" class="section">
+      <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+      <input style="height: 30px; width: 100%;" type="text" placeholder="Qidiring yoki savol bering...">
+    </div>
+
+    <div id="galleryu" class="section">
+      <img style="margin-left: 80px;" width="200px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/1200px-Telegram_2019_Logo.svg.png" alt="Telegram">
+      <input style="height: 30px; width: 100%;" type="text" placeholder="Xabar yozing...">
+    </div>
+    <div id="gallerya" class="section">
+        <iframe style="transform: translateY(100px); height: 405px;" src="https://www.desmos.com/fourfunction" frameborder="0"></iframe>
+      </div>
+  </div>
+
+ <script>
+  const sections = document.querySelectorAll('.section');
+  const buttons = document.getElementById('buttons');
+  const backBtn = document.getElementById('backBtn');
+  const screen = document.getElementById('screenOff');
+  let powerOn = true;
+
+  function showSection(id) {
+    if (!powerOn) return;
+    sections.forEach(s => s.style.display = 'none');
+    buttons.style.display = 'none';
+    backBtn.style.display = 'block';
+    document.getElementById(id).style.display = 'block';
+  }
+
+  function goBack() {
+    if (!powerOn) return;
+    sections.forEach(s => s.style.display = 'none');
+    buttons.style.display = 'flex';
+    backBtn.style.display = 'none';
+  }
+
+  function togglePower() {
+    powerOn = !powerOn;
+    screen.style.display = powerOn ? 'none' : 'block';
+    if (!powerOn) goBack();
+  }
+</script>
+
+
+</body>
+</html>

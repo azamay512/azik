@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let c = prompt("Ism") 
+        let b = prompt("Yosh")
+
+        let user = {
+            name: c,
+            age: b,
+
+            huh(){
+             alert(this.name);
+             alert(this.age);
+            }
+        }
+           
+        console.log(user.name);
+        console.log(user.age);
+        
+        let a = user;
+        user = null;
+
+        a.huh();
+    </script>
+</body>
+</html>                            

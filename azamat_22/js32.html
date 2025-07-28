@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <div class="lo">
+      <input id="city" type="text" placeholder="shahar nomi">
+      <button onclick="goat()">click</button>
+      <div id="click" class="hack"></div>
+    </div>
+     
+    </div>
+         <script>
+
+          function goat() {
+            let city = document.getElementById("city").value;
+
+               fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=49a39b49462b6e8624780044f4a883ec&units=metric`)
+           .then(res => res.json())
+           .then(date => {
+            document.getElementById("click").innerHTML = (`${city} uchun havo harorati ${date.main.temp}C`);
+           });
+         }
+           
+         </script>   
+
+</body>
+</html>

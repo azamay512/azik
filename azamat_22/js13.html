@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Mahsulot(sum,ul) {
+            this.sum = sum
+            this.ul = ul
+            this.salom = function () {
+                return`mahsulot nomi ${this.sum} narxi ${this.ul} `
+            }
+        }
+        const a =prompt("Mahsulot nomi")
+        const b =prompt("Mahsulot narxi")
+        const c =prompt("Mahsulot sifati")
+        const g =prompt("maxsulot turi")
+        const d = new Mahsulot(a,b,c,g )
+
+        alert(d.salom())
+    </script>
+</body>
+</html>

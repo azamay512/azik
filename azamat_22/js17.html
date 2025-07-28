@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+  <style>
+    body {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-image 0.5s ease;
+    }
+
+    .car {
+      width: 200px;
+      margin: 10px;
+      cursor: pointer;
+      border: 3px solid transparent;
+      border-radius: 10px;
+    }
+
+    .car:hover {
+      border-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>BMW Rasmini Tanlang</h1>
+
+  
+  <img src="https://avatars.mds.yandex.net/i?id=1f81deaf337b0b1ddfe7a8f904b89582b1c0c6db-7013451-images-thumbs&n=13" id="bmw1" class="car">
+  <img src="https://avatars.mds.yandex.net/i?id=c9bb700e28715f1bbe9c46bc1f9f5093a78d4f97-10555985-images-thumbs&n=13" id="bmw2" class="car">
+  <img src="https://avatars.mds.yandex.net/i?id=48be5054ecc514f0c35cc2963340d0a41b1831e5-10812190-images-thumbs&n=13" id="bmw3" class="car">
+
+  <script>
+    function changeBackground(yo) {
+      document.body.style.backgroundImage = "url('" + yo + "')";
+    }
+
+    document.getElementById("bmw1").onclick = function() {
+      changeBackground(this.src);
+    }
+
+    document.getElementById("bmw2").onclick = function() {
+      changeBackground(this.src);
+    }
+
+    document.getElementById("bmw3").onclick = function() {
+      changeBackground(this.src);
+    }
+  </script>
+
+</body>
+</html>

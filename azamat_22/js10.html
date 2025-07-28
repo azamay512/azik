@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            name: "Azamat",
+            age: 30      
+        }
+               let use = {
+            name: "Javohir",
+            age: 0,
+            job: "Dizayner",
+        }
+        let clone = {}
+
+        for (let key in use) {
+            clone[key] = use[key];
+            if(key === "name" || key === "age" || key === "job") {
+
+            }
+        }
+         for (let key in user) {
+            clone[key] = user[key];
+             if(key === "name" || key === "age") {
+                
+            }
+        }
+
+        alert(clone.name)
+        alert(clone.age)
+        alert(clone.job)
+        
+    </script>
+</body>
+</html>

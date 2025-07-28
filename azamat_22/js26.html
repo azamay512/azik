@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let t = [];
+
+let s = prompt("Nechta talaba bor?");
+
+for (let i = 0; i < s; i++) {
+  let a = prompt((i + 1) + "-talaba ismini kiriting:");
+  t.push(a);
+}
+
+let y = "";
+t.forEach((s, n) => {
+  y += (n + 1) + "." + s + "  ";
+});
+
+alert("Yakuniy ro'yxat:\n" + y);
+    </script>
+</body>  
+</html>
