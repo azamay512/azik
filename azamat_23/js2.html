@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .a-footer-links,
+    .b-footer-support,
+    .d-hero,
+    .d-navbar,
+    .d-navbar-buttons,
+    .d-navbar-menu,
+    .d-news,
+    .d-section,
+    .d-xbox {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .d-navbar {
+      background-color: #111;
+      padding: 15px 40px;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .d-navbar .logo img {
+      height: 40px;
+    }
+
+    .d-navbar-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 30px;
+    }
+
+    .d-navbar-menu li {
+      transition: color 0.3s;
+      cursor: pointer;
+    }
+
+    .d-navbar-menu li:hover {
+      color: #ffcc00;
+    }
+
+    .d-navbar-buttons {
+      gap: 10px;
+    }
+
+    .d-navbar-buttons button {
+      background-image: linear-gradient(to right, #ffcc00, #ffaa00);
+      border: none;
+      padding: 10px 18px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .d-navbar-buttons button:hover {
+      background-image: linear-gradient(to right, #ffaa00, #ffcc00);
+      transform: scale(1.05);
+      color: #000;
+    }
+
+    .d-hero {
+      background-image: url('https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/hub/v2023/hero/2025/06/060825_CodHP_Hero_Desktop-LG.webp');
+      background-size: cover;
+      background-position: center;
+      height: 85vh;
+      width: 100%;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .d-hero-content {
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .download-btn {
+      margin-top: 20px;
+      background-image: linear-gradient(to right, rgb(0, 225, 255), #ffaa00);
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+
+    .download-btn a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .d-news {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .d-section {
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 40px 20px;
+    }
+
+    .d-xbox {
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .a-footer-links,
+    .b-footer-support {
+      justify-content: center;
+      gap: 40px;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 768px) {
+      .d-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .d-navbar-menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .d-hero {
+        height: auto;
+        padding: 60px 20px;
+      }
+
+      .d-hero-content h2 {
+        font-size: 1.2rem;
+      }
+
+      .d-section img {
+        width: 100%;
+        max-width: 90vw;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="d-navbar">
+    <div class="logo">
+      <img src="https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/global/cod-logo.svg" alt="">
+    </div>
+    <ul class="d-navbar-menu">
+      <li>Play</li>
+      <li>Share</li>
+      <li>Search</li>
+    </ul>
+    <div class="d-navbar-buttons">
+      <button>Sign Up</button>
+      <button>Login</button>
+    </div>
+  </div>
+
+
+  <div class="d-hero">
+    <div class="d-hero-content">
+      <img src="https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/hub/v2023/hero/2025/06/COD_BO7_LOGO_NEG.svg" alt="">
+      <h2>Call of Duty: Black Ops 7 brings the <br> most explosive experience in franchise history.</h2>
+      <button class="download-btn">
+        <a href="https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter&hl=ru" download>Download the Game (.zip)</a>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="d-news">
+    <h2>LATEST NEWS</h2>
+    <img width="320px" src="https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/guides/games/blackops6/zombies/gobblegums/BO6-ZM-GG-TOUT.jpg" alt="">
+    <h2>Zombie Mission: <br> Eliminate 1000 Zombies</h2>
+    <video autoplay muted loop width="320">
+      <source src="https://www.callofduty.com/cdn/bo6/BO6_VE_PlayNowCardBG.mp4" type="video/mp4">
+    </video>
+  </div>
+
+
+  <div class="d-xbox">
+    <img src="https://www.callofduty.com/content/dam/atvi/global/firstparty/xbox-game-pass/xbox_game_pass_white.svg" alt="">
+    <h3>Enjoy Black Ops 6 on console and PC via Xbox Game Pass.</h3>
+  </div>
+
+
+  <div class="d-section">
+    <img width="500px" src="https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/hub/v2023/touts/2025/06/060825_CodHP_Small-Tout.webp" alt="">
+    <img width="500px" src="https://www.callofduty.com/content/dam/atvi/callofduty/cod-touchui/hub/v2023/touts/2025/05/COD-HP_Secondary-Tout_WZ_S4.webp" alt="">
+  </div>
+
+
+  <div class="a-footer-links">
+    <h4>LEGAL</h4>
+    <h4>TERMS OF USE</h4>
+    <h4>PRIVACY POLICY</h4>
+    <h4>CAREERS</h4>
+    <h4>COOKIE POLICY</h4>
+  </div>
+
+
+  <div class="b-footer-support">
+    <h4>SUPPORT</h4>
+    <h4>CODE OF CONDUCT</h4>
+    <h4>PRIVACY OPTIONS</h4>
+  </div>
+
+</body>
+</html>
