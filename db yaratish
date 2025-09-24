@@ -1,0 +1,19 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+$conn = mysqli_connect($servername,$username,$password);
+
+if ($conn->connect_error) {
+    die("connect file" . $conn->connect_error);
+}
+      
+$sql = "CREATE DATABASE web";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Malumotlar bazasi qushildi";
+}else {
+    echo "bunday malumotlar bazasi mavjud" . $conn->error;
+}
+?>
